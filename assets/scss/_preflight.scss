@@ -1,13 +1,23 @@
+@use "sass:map";
+
 @use "variables.scss" as *;
 @use "functions.scss" as *;
+@use "mixins.scss" as *;
 
 :root {
   --viewport-width: 100vw;
-  --viewport-height: 100vh;
-  --base-viewport-width: 1920;
+  --base-viewport-width: #{map.get($base-viewport, "small")};
 
   @each $key, $value in $colors {
     --color-#{$key}: #{extractRGB($value)};
+  }
+
+  @include tablet-screen {
+    --base-viewport-width: #{map.get($base-viewport, "medium")};
+  }
+
+  @include desktop-screen {
+    --base-viewport-width: #{map.get($base-viewport, "large")};
   }
 }
 
