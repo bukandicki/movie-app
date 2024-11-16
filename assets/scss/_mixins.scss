@@ -1,6 +1,7 @@
 @use "sass:map";
 
 @use "variables.scss" as *;
+@use "functions.scss" as *;
 
 @mixin fontStyling($size, $weight: 400, $family: "Switzer") {
   font-family: #{$family}, sans-serif;
