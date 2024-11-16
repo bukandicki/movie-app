@@ -12,6 +12,8 @@ export default defineNuxtConfig({
     },
   },
 
+  css: ["~/assets/scss/_preflight.scss"],
+
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true }
 })
