@@ -1,7 +1,29 @@
+@use "variables.scss" as *;
+@use "functions.scss" as *;
+
+:root {
+  --viewport-width: 100vw;
+  --viewport-height: 100vh;
+  --base-viewport-width: 1920;
+
+  @each $key, $value in $colors {
+    --color-#{$key}: #{extractRGB($value)};
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Switzer", sans-serif;
+}
+
+body {
+  background-color: getColor("eerie");
+  color: getColor("ivory");
 }
 
 a {
