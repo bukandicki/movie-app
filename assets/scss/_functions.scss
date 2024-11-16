@@ -1,3 +1,14 @@
+@use "sass:color";
+
 @function viewportSize($size) {
   @return calc($size * (var(--viewport-width) / var(--base-viewport-width)));
+}
+
+@function extractRGB($color) {
+  @return color.channel($color, "red", rgb), color.channel($color, "green", rgb),
+    color.channel($color, "blue", rgb);
+}
+
+@function getColor($value, $alpha: 1) {
+  @return rgba(var(--color-#{$value}), $alpha);
 }
