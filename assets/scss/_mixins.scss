@@ -1,0 +1,15 @@
+@use "sass:map";
+
+@use "variables.scss" as *;
+
+@mixin tablet-screen {
+  @media screen and (min-width: #{map.get($breakpoints, "medium")}px) {
+    @content;
+  }
+}
+
+@mixin desktop-screen {
+  @media screen and (min-width: #{map.get($breakpoints, "large")}px) {
+    @content;
+  }
+}
