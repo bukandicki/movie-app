@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <main></main>
+  <main class="Home"></main>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use "./Home.styles.scss" as *;
+</style>
