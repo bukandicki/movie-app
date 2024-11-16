@@ -1,0 +1,3 @@
+@function viewportSize($size) {
+  @return calc($size * (var(--viewport-width) / var(--base-viewport-width)));
+}
