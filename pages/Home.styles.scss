@@ -38,7 +38,7 @@
 .Hero__detail {
   position: relative;
   z-index: 1;
-  padding: viewportSize(144) viewportSize(80);
+  padding: viewportSize(208) viewportSize(80);
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -97,12 +97,12 @@
     width: viewportSize(72);
     aspect-ratio: 1;
     border-radius: 50%;
-    border: solid viewportSize(2) getColor("ivory");
+    border: solid viewportSize(2) getColor("sea");
   }
 
   > span:nth-child(1) svg {
     width: viewportSize(24);
-    fill: getColor("ivory");
+    fill: getColor("sea");
   }
 
   > span:nth-child(2) {
