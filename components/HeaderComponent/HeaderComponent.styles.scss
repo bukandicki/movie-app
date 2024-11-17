@@ -15,10 +15,18 @@
   @include fontStyling(32, 600, "Khand");
 }
 
+.Header__nav li a,
+.Header__login {
+  transition: all ease-in-out 0.25s;
+
+  &:hover {
+    color: getColor("sea");
+  }
+}
+
 .Header__nav {
   li a {
     @include fontStyling(16, 600);
-    color: getColor("ivory");
   }
 }
 
@@ -33,9 +41,10 @@
   }
 
   input {
-    @include fontStyling(18);
+    @include fontStyling(18, 500);
     margin-left: viewportSize(16);
     color: getColor("ivory");
+    padding-right: viewportSize(32);
 
     &::placeholder {
       color: getColor("ivory", 0.7);
@@ -45,4 +54,8 @@
       color: getColor("ivory", 0.7);
     }
   }
+}
+
+.Header__login {
+  @include fontStyling(16, 600);
 }

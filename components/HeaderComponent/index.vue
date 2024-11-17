@@ -16,6 +16,8 @@
       <IconSearch />
 
       <input type="text" placeholder="Search Movies..." />
+
+      <NuxtLink class="Header__login" href="/">LOGIN</NuxtLink>
     </div>
   </header>
 </template>

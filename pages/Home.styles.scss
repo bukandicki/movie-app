@@ -38,7 +38,7 @@
 .Hero__detail {
   position: relative;
   z-index: 1;
-  padding: viewportSize(208) viewportSize(80);
+  padding: viewportSize(208) viewportSize(112);
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -90,6 +90,11 @@
   align-items: center;
   align-self: baseline;
 
+  > span:nth-child(1),
+  > span:nth-child(1) svg {
+    transition: all ease-in-out 0.25s;
+  }
+
   > span:nth-child(1) {
     display: flex;
     align-items: center;
@@ -120,6 +125,16 @@
     @include fontStyling(16);
     display: block;
     color: getColor("ivory", 0.8);
+  }
+
+  &:hover {
+    > span:nth-child(1) {
+      background-color: getColor("sea");
+    }
+
+    > span:nth-child(1) svg {
+      fill: getColor("ivory");
+    }
   }
 }
 
@@ -153,7 +168,7 @@
 }
 
 .Awards__name {
-  @include fontStyling(14, 600);
+  @include fontStyling(14, 500);
   display: block;
   max-width: viewportSize(160);
 }
