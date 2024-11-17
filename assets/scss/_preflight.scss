@@ -41,8 +41,13 @@ a {
 }
 
 a,
-img {
+img,
+svg {
   display: block;
+}
+
+svg {
+  vertical-align: middle;
 }
 
 button,
