@@ -38,7 +38,7 @@
 .Hero__detail {
   position: relative;
   z-index: 1;
-  padding: viewportSize(208) viewportSize(112);
+  padding-top: viewportSize(208);
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -174,21 +174,41 @@
 }
 
 .Home__voted {
+  padding-left: viewportSize(112);
+  margin-bottom: viewportSize(80);
+  margin: viewportSize(80) 0;
+  display: flex;
+  gap: viewportSize(96);
 }
 
 .Voted__headline {
+  flex-shrink: 0;
+  max-width: viewportSize(340);
+
+  h2 {
+    @include fontStyling(60, 600, "Khand");
+  }
+
+  p {
+    @include fontStyling(16);
+    color: getColor("ivory", 0.7);
+  }
 }
 
 .VotedMovies {
 }
 
 .VotedMovies__item {
+  width: fit-content;
 }
 
 .Home__movies {
 }
 
 .Movies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: viewportSize(40);
 }
 
 .Movies__item {

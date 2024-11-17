@@ -67,3 +67,8 @@ ol,
 ul {
   list-style-type: none;
 }
+
+.container {
+  padding-left: viewportSize(112);
+  padding-right: viewportSize(112);
+}

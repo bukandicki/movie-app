@@ -1,4 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+import "swiper/css";
+
+const { result: slide_space } = useCalc("slide-space", 40);
+const { result: slide_offset } = useCalc("slide-offset", 112);
+</script>
 
 <template>
   <main class="Home">
@@ -13,7 +20,7 @@
         />
       </div>
 
-      <div class="Hero__detail">
+      <div class="container Hero__detail">
         <div class="Hero__summary">
           <div class="Hero__information">
             <h1 class="Hero__title">Ghostbusters: Frozen Empire</h1>
@@ -67,19 +74,29 @@
       <div class="Voted__headline">
         <h2>VOTED MOVIES</h2>
 
-        <p>The movies that stole the spotlight!</p>
+        <p>
+          Discover the top-rated movies handpicked by viewers like you. Dive
+          into stories that have captured hearts and imaginations.
+        </p>
       </div>
 
-      <ul class="VotedMovies">
-        <li class="VotedMovies__item">
-          <MovieCard />
-        </li>
-      </ul>
+      <ClientOnly>
+        <swiper
+          :space-between="slide_space"
+          :slides-offset-after="slide_offset"
+          slides-per-view="auto"
+          class="VotedMovies"
+        >
+          <swiper-slide v-for="i in 10" :key="i" class="VotedMovies__item">
+            <MovieCard />
+          </swiper-slide>
+        </swiper>
+      </ClientOnly>
     </section>
 
-    <section class="Home__movies">
+    <section class="container Home__movies">
       <ul class="Movies">
-        <li class="Movies__item">
+        <li v-for="i in 20" :key="i" class="Movies__item">
           <MovieCard />
         </li>
       </ul>
