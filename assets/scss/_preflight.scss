@@ -58,6 +58,16 @@ input {
   background-color: transparent;
 }
 
+input {
+  &::placeholder {
+    color: getColor("ivory", 0.7);
+  }
+
+  &::-ms-input-placeholder {
+    color: getColor("ivory", 0.7);
+  }
+}
+
 button {
   display: block;
   cursor: pointer;
