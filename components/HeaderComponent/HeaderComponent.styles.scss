@@ -1,0 +1,48 @@
+@use "~/assets/scss/functions" as *;
+@use "~/assets/scss/mixins" as *;
+
+.Header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: viewportSize(60) viewportSize(80);
+  position: absolute;
+  z-index: 2;
+}
+
+.Header__brand {
+  @include fontStyling(32, 600, "Khand");
+}
+
+.Header__nav {
+  li a {
+    @include fontStyling(16, 600);
+    color: getColor("ivory");
+  }
+}
+
+.Header__search {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: viewportSize(20);
+    stroke-width: 3;
+    stroke: getColor("ivory");
+  }
+
+  input {
+    @include fontStyling(18);
+    margin-left: viewportSize(16);
+    color: getColor("ivory");
+
+    &::placeholder {
+      color: getColor("ivory", 0.7);
+    }
+
+    &::-ms-input-placeholder {
+      color: getColor("ivory", 0.7);
+    }
+  }
+}
