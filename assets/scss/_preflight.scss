@@ -38,21 +38,27 @@ body {
 
 a {
   text-decoration: none;
+  color: getColor("ivory");
 }
 
 a,
-img {
+img,
+svg {
   display: block;
+}
+
+svg {
+  vertical-align: middle;
 }
 
 button,
 input {
   outline: none;
+  border: none;
+  background-color: transparent;
 }
 
 button {
-  background-color: transparent;
-  border: none;
   display: block;
   cursor: pointer;
 }
