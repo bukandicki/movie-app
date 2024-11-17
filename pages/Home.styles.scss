@@ -1,28 +1,161 @@
-.Home {
-}
+@use "~/assets/scss/functions" as *;
+@use "~/assets/scss/mixins" as *;
 
 .Home__hero {
+  height: 100vh;
 }
 
 .Hero__img {
-}
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
 
-.Hero__awards {
+  img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 viewportSize(204) viewportSize(320) getColor("eerie", 0.1)
+        inset,
+      0 viewportSize(-120) viewportSize(240) viewportSize(112) getColor("eerie")
+        inset,
+      0 viewportSize(-80) viewportSize(240) viewportSize(90)
+        getColor("eerie", 0.5) inset;
+    background-color: getColor("eerie", 0.3);
+  }
 }
 
 .Hero__detail {
+  position: relative;
+  z-index: 1;
+  padding: viewportSize(144) viewportSize(80);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 .Hero__information {
+  max-width: viewportSize(500);
+  padding-bottom: viewportSize(56);
+  border-bottom: solid viewportSize(4) getColor("ivory");
 }
 
 .Hero__title {
+  @include fontStyling(80, 600, "Khand");
+  text-transform: uppercase;
+  line-height: viewportSize(44 * 1.618);
+  margin-bottom: viewportSize(40);
 }
 
 .Hero__description {
+  @include fontStyling(20);
+  line-height: viewportSize(24 * 1.618);
 }
 
 .Hero__galeries {
+  display: flex;
+  align-items: center;
+  gap: viewportSize(44);
+  padding-top: viewportSize(80);
+}
+
+.Gallery__display {
+  img {
+    width: viewportSize(200);
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    margin-bottom: viewportSize(14);
+  }
+
+  span {
+    @include fontStyling(16);
+    display: block;
+  }
+}
+
+.Gallery__watch {
+  width: viewportSize(200);
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: center;
+  align-self: baseline;
+
+  > span:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: viewportSize(72);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: solid viewportSize(2) getColor("ivory");
+  }
+
+  > span:nth-child(1) svg {
+    width: viewportSize(24);
+    fill: getColor("ivory");
+  }
+
+  > span:nth-child(2) {
+    text-align: left;
+    margin-left: viewportSize(24);
+  }
+
+  > span:nth-child(2) strong {
+    @include fontStyling(18, 600, "Khand");
+    display: block;
+    color: getColor("ivory");
+  }
+
+  > span:nth-child(2) span {
+    @include fontStyling(16);
+    display: block;
+    color: getColor("ivory", 0.8);
+  }
+}
+
+.Hero__awards {
+  margin-top: viewportSize(44);
+}
+
+.Awards__detail {
+  &:first-child {
+    margin-bottom: viewportSize(80);
+    padding-bottom: viewportSize(80);
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: viewportSize(40);
+      height: viewportSize(4);
+      background-color: getColor("ivory");
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.Awards__counter {
+  @include fontStyling(112, 600, "Khand");
+  line-height: viewportSize(60 * 1.618);
+  margin-bottom: viewportSize(32);
+}
+
+.Awards__name {
+  @include fontStyling(14, 600);
+  display: block;
+  max-width: viewportSize(160);
 }
 
 .Home__voted {
