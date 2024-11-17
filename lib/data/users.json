@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name": "Dicki Maulana",
+    "email": "dicki@gmail.com",
+    "password": "dicki",
+    "voted_movies": [
+      {
+        "movie_id": 1,
+        "rating": 2
+      }
+    ],
+    "last_views": [1]
+  },
+  {
+    "id": 2,
+    "name": "Jhon",
+    "email": "jhon@gmail.com",
+    "password": "jhon",
+    "voted_movies": [
+      {
+        "movie_id": 1,
+        "rating": 3
+      }
+    ],
+    "last_views": [1]
+  }
+]

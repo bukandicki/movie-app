@@ -1,0 +1,23 @@
+@use "sass:map";
+
+@use "variables.scss" as *;
+@use "functions.scss" as *;
+
+@mixin fontStyling($size, $weight: 400, $family: "Switzer") {
+  font-family: #{$family}, sans-serif;
+  font-size: viewportSize(#{$size});
+  line-height: goldenLineHeight(#{$size});
+  font-weight: $weight;
+}
+
+@mixin tablet-screen {
+  @media screen and (min-width: #{map.get($breakpoints, "medium")}px) {
+    @content;
+  }
+}
+
+@mixin desktop-screen {
+  @media screen and (min-width: #{map.get($breakpoints, "large")}px) {
+    @content;
+  }
+}

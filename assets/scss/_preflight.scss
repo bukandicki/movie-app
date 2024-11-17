@@ -1,0 +1,63 @@
+@use "sass:map";
+
+@use "variables.scss" as *;
+@use "functions.scss" as *;
+@use "mixins.scss" as *;
+
+:root {
+  --viewport-width: 100vw;
+  --base-viewport-width: #{map.get($base-viewport, "small")};
+
+  @each $key, $value in $colors {
+    --color-#{$key}: #{extractRGB($value)};
+  }
+
+  @include tablet-screen {
+    --base-viewport-width: #{map.get($base-viewport, "medium")};
+  }
+
+  @include desktop-screen {
+    --base-viewport-width: #{map.get($base-viewport, "large")};
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Switzer", sans-serif;
+}
+
+body {
+  background-color: getColor("eerie");
+  color: getColor("ivory");
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+img {
+  display: block;
+}
+
+button,
+input {
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
