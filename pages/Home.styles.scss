@@ -176,7 +176,7 @@
 .Home__voted {
   padding-left: viewportSize(112);
   margin-bottom: viewportSize(80);
-  margin: viewportSize(80) 0;
+  margin: viewportSize(120) 0;
   display: flex;
   gap: viewportSize(96);
 }
@@ -195,17 +195,75 @@
   }
 }
 
-.VotedMovies {
-}
-
 .VotedMovies__item {
   width: fit-content;
+}
+
+.Home__recently {
+  margin-bottom: viewportSize(120);
+}
+
+.Recently__headline {
+  h2,
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    @include fontStyling(60, 600, "Khand");
+  }
+
+  p {
+    @include fontStyling(16);
+    color: getColor("ivory", 0.7);
+    margin-bottom: viewportSize(80);
+  }
 }
 
 .Home__movies {
 }
 
-.Movies {
+.Movies__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: viewportSize(80);
+}
+
+.Movies__headline {
+  max-width: viewportSize(700);
+
+  h2,
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    @include fontStyling(60, 600, "Khand");
+  }
+
+  p {
+    @include fontStyling(16);
+    color: getColor("ivory", 0.7);
+  }
+}
+
+.Movies__search {
+  display: flex;
+  align-items: center;
+  margin-top: viewportSize(20);
+  border-bottom: solid viewportSize(2);
+
+  input {
+    @include fontStyling(18, 500);
+    color: getColor("ivory");
+    text-align: center;
+    padding: viewportSize(12);
+  }
+}
+
+.Movies__lists {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: viewportSize(40);

@@ -94,8 +94,44 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
       </ClientOnly>
     </section>
 
+    <section class="Home__recently">
+      <div class="container Recently__headline">
+        <h2>RECENTLY WATCHED</h2>
+
+        <p>Catch up on the movies you’ve just seen and relive the moments.</p>
+      </div>
+
+      <ClientOnly>
+        <swiper
+          :space-between="slide_space"
+          :slides-offset-before="slide_offset"
+          slides-per-view="auto"
+          class="VotedMovies"
+        >
+          <swiper-slide v-for="i in 10" :key="i" class="VotedMovies__item">
+            <MovieCard />
+          </swiper-slide>
+        </swiper>
+      </ClientOnly>
+    </section>
+
     <section class="container Home__movies">
-      <ul class="Movies">
+      <div class="Movies__header">
+        <div class="Movies__headline">
+          <h2>FEATURED FILMS</h2>
+          <p>
+            Browse through an extensive collection of films, from iconic
+            masterpieces to hidden gems, guaranteed to leave a lasting
+            impression.
+          </p>
+        </div>
+
+        <div class="Movies__search">
+          <input type="text" placeholder="Search Movies..." />
+        </div>
+      </div>
+
+      <ul class="Movies__lists">
         <li v-for="i in 20" :key="i" class="Movies__item">
           <MovieCard />
         </li>
