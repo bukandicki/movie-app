@@ -1,9 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <main class="Home"></main>
+  <main class="Cms"></main>
 </template>
 
 <style lang="scss">
-@use "./Home.styles.scss" as *;
+@use "./Cms.styles.scss" as *;
 </style>
