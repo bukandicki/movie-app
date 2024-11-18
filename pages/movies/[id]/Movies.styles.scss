@@ -1,0 +1,138 @@
+@use "~/assets/scss/functions" as *;
+@use "~/assets/scss/mixins" as *;
+
+.MovieDetail {
+  padding-top: viewportSize(208);
+  padding-bottom: viewportSize(208);
+}
+
+.MovieDetail__display {
+}
+
+.Display__title {
+  @include fontStyling(180, 600, "Khand");
+  text-transform: uppercase;
+  line-height: viewportSize(96 * 1.618);
+  margin-bottom: viewportSize(32);
+}
+
+.Display__description {
+  @include fontStyling(24);
+}
+
+.Display__detail {
+  display: flex;
+  gap: viewportSize(96);
+  margin: viewportSize(80) 0;
+
+  svg {
+    width: viewportSize(32);
+  }
+
+  span {
+    @include fontStyling(24, 500);
+    display: flex;
+    align-items: center;
+    gap: viewportSize(14);
+  }
+
+  span:nth-child(1) svg,
+  span:nth-child(2) svg {
+    stroke: getColor("ivory");
+    stroke-width: 2.5;
+  }
+
+  span:nth-child(1) svg {
+    fill: getColor("ivory");
+  }
+
+  span:nth-child(2) {
+    color: getColor("ivory", 0.7);
+  }
+}
+
+.Vote {
+  display: flex;
+}
+
+.Vote__stars {
+  display: flex;
+  align-items: center;
+  gap: viewportSize(4);
+
+  strong {
+    @include fontStyling(16, 500);
+
+    display: block;
+    margin-right: viewportSize(20);
+  }
+}
+
+.Vote__star-btn {
+  svg {
+    width: viewportSize(32);
+    fill: transparent;
+    stroke-width: 2.5;
+    stroke: getColor("ivory");
+  }
+}
+
+.Vote__star-btn[data-selected="true"] svg {
+  fill: getColor("ivory");
+}
+
+.Vote__submit,
+.Vote__cancel {
+  @include fontStyling(18, 500);
+  border-radius: viewportSize(10);
+  margin-left: viewportSize(20);
+  padding: viewportSize(10) viewportSize(20);
+  border: solid viewportSize(1) getColor("ivory");
+  color: getColor("ivory");
+}
+
+.Vote__submit {
+  background-color: getColor("sea");
+  border-color: getColor("sea");
+}
+
+.Display__thumbnail {
+  width: viewportSize(1200);
+  margin: 0 auto;
+  position: relative;
+}
+
+.Display__img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/10;
+}
+
+.Display__play {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: getColor("eerie", 0.7);
+
+  svg {
+    width: viewportSize(112);
+    fill: getColor("sea");
+    transition: transform 0.25s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.Display__video {
+  width: 100%;
+  aspect-ratio: 16/10;
+}
