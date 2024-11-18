@@ -4,7 +4,7 @@ import movies from "@/lib/data/movies.json";
 
 export default defineEventHandler(async (event) => {
   const id = getRouterParam(event, "id");
-  const body = await readBody<Omit<MOVIE_TYPE, "id">>(event);
+  const body = await readBody<Partial<Omit<MOVIE_TYPE, "id">>>(event);
 
   const movie_index = movies.findIndex(
     (movie) => movie.id === parseInt(id as string)
