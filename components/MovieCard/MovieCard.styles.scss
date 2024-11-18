@@ -20,27 +20,37 @@
   display: flex;
   margin-top: viewportSize(12);
   justify-content: space-between;
+  align-items: center;
 
   svg {
-    width: viewportSize(15);
+    width: viewportSize(16);
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: viewportSize(20);
   }
 }
 
 .MovieCard__duration,
+.MovieCard__viewers,
 .MovieCard__rating {
   display: flex;
   align-items: center;
   gap: viewportSize(8);
 }
 
-.MovieCard__duration {
+.MovieCard__duration,
+.MovieCard__viewers {
   @include fontStyling(16);
   color: getColor("ivory", 0.5);
+}
 
-  svg {
-    stroke: getColor("ivory", 0.5);
-    stroke-width: 3;
-  }
+.MovieCard__duration svg,
+.MovieCard__viewers svg {
+  stroke: getColor("ivory", 0.5);
+  stroke-width: 3;
 }
 
 .MovieCard__rating {

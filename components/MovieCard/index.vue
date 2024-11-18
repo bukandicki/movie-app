@@ -15,7 +15,11 @@
 
     <div class="MovieCard__details">
       <span class="MovieCard__rating"><IconStar /> 4.2</span>
-      <span class="MovieCard__duration"><IconClock /> 2h 30m</span>
+
+      <div>
+        <span class="MovieCard__viewers"><IconEye /> 2</span>
+        <span class="MovieCard__duration"><IconClock /> 2h 30m</span>
+      </div>
     </div>
   </NuxtLink>
 </template>
