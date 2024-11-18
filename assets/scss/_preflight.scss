@@ -52,13 +52,18 @@ svg {
 }
 
 button,
+textarea,
 input {
   outline: none;
   border: none;
   background-color: transparent;
 }
 
+textarea,
 input {
+  @include fontStyling(18, 500);
+  color: getColor("ivory");
+
   &::placeholder {
     color: getColor("ivory", 0.7);
   }
