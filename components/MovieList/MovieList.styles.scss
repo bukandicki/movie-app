@@ -1,0 +1,53 @@
+@use "~/assets/scss/functions" as *;
+@use "~/assets/scss/mixins" as *;
+
+.MovieList {
+  padding-bottom: viewportSize(80);
+}
+
+.MovieList__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: viewportSize(80);
+}
+
+.MovieList__headline {
+  max-width: viewportSize(700);
+
+  h2,
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    @include fontStyling(60, 600, "Khand");
+  }
+
+  p {
+    @include fontStyling(16);
+    color: getColor("ivory", 0.7);
+  }
+}
+
+.MovieList__search {
+  display: flex;
+  align-items: center;
+  margin-top: viewportSize(20);
+  border-bottom: solid viewportSize(2);
+
+  input {
+    text-align: center;
+    padding: viewportSize(12);
+  }
+}
+
+.MovieList__lists {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: viewportSize(40);
+}
+
+.MovieList__item {
+}

@@ -1,0 +1,107 @@
+@use "~/assets/scss/functions" as *;
+@use "~/assets/scss/mixins" as *;
+
+.Cms {
+  padding-top: viewportSize(208);
+}
+
+.Cms__form {
+  width: viewportSize(1200);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: viewportSize(32);
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: viewportSize(20);
+    border: solid viewportSize(2) getColor("ivory");
+  }
+
+  textarea {
+    min-height: viewportSize(200);
+    resize: vertical;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+}
+
+.Form__multiple {
+  div {
+    margin-top: viewportSize(16);
+    display: flex;
+    gap: viewportSize(12);
+  }
+
+  div button {
+    @include fontStyling(16, 500);
+    display: flex;
+    align-items: center;
+    gap: viewportSize(8);
+    background-color: getColor("sea", 0.2);
+    padding: viewportSize(4) viewportSize(8);
+    color: getColor("sea");
+  }
+
+  div button svg {
+    width: viewportSize(20);
+    stroke-width: 1;
+    stroke: getColor("sea");
+  }
+}
+
+.Form__grouped {
+  display: flex;
+  align-items: center;
+  gap: viewportSize(32);
+}
+
+.Form__file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  width: viewportSize(400);
+  cursor: pointer;
+  background-color: getColor("sea", 0.2);
+
+  svg {
+    width: viewportSize(32);
+    stroke: getColor("sea");
+    margin-bottom: viewportSize(12);
+  }
+
+  span {
+    @include fontStyling(16);
+    color: getColor("ivory");
+  }
+
+  img,
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+}
+
+.Form__file--thumbnail {
+  aspect-ratio: 3/4;
+}
+
+.Form__file--video {
+  aspect-ratio: 16/10;
+}
+
+.Form__sumbit {
+  @include fontStyling(32, 500);
+  width: fit-content;
+  margin: 0 auto;
+  background-color: getColor("ivory");
+  padding: viewportSize(10) viewportSize(20);
+  color: getColor("eerie");
+}

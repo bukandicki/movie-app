@@ -3,22 +3,22 @@ import users from "@/lib/data/users.json";
 /**
  * Finds users who have rated a specific movie.
  * @param id - The ID of the movie to find ratings for.
- * @returns An array of objects containing the user's name and their rating.
+ * @returns An array of objects containing the user's id and their rating.
  */
 export const getUsersWhoRatedMovie = (
   id: number
-): Array<{ name: string; rating: number }> => {
+): Array<{ id: number; rating: number }> => {
   return users.reduce((rated_users, user) => {
     const rating = user.voted_movies.find((vote) => vote.movie_id === id);
 
     if (rating) {
       rated_users.push({
-        name: user.name,
+        id: user.id,
         rating: rating.rating,
       });
     }
     return rated_users;
-  }, [] as Array<{ name: string; rating: number }>);
+  }, [] as Array<{ id: number; rating: number }>);
 };
 
 /**

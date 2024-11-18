@@ -3,8 +3,21 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 import "swiper/css";
 
+const movieStore = useMovieStore();
+const userStore = useUserStore();
+
 const { result: slide_space } = useCalc("slide-space", 40);
 const { result: slide_offset } = useCalc("slide-offset", 112);
+
+await useAsyncData("fetch_movies", () => movieStore.FETCH_MOVIES(), {
+  watch: [movieStore.movie_filter],
+});
+
+const handleSearchMovies = (value: string) => {
+  movieStore.movie_filter.page = 1;
+  movieStore.movie_filter.limit = 10;
+  movieStore.movie_filter.search = value;
+};
 </script>
 
 <template>
@@ -45,7 +58,7 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
               <span>Peter Parker's Dead</span>
             </div>
 
-            <button class="Gallery__watch">
+            <button type="button" class="Gallery__watch">
               <span><IconPlay /></span>
 
               <span>
@@ -70,7 +83,7 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
       </div>
     </section>
 
-    <section class="Home__voted">
+    <section class="Home__voted" v-if="userStore.user">
       <div class="Voted__headline">
         <h2>VOTED MOVIES</h2>
 
@@ -87,14 +100,22 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
           slides-per-view="auto"
           class="VotedMovies"
         >
-          <swiper-slide v-for="i in 10" :key="i" class="VotedMovies__item">
-            <MovieCard />
+          <swiper-slide
+            v-for="movie in movieStore.movies.data.filter((movie) =>
+              userStore.user?.voted_movies.some(
+                (voted) => voted.movie_id === movie.id
+              )
+            )"
+            :key="movie.id"
+            class="VotedMovies__item"
+          >
+            <MovieCard :data="movie" />
           </swiper-slide>
         </swiper>
       </ClientOnly>
     </section>
 
-    <section class="Home__recently">
+    <section class="Home__recently" v-if="userStore.user">
       <div class="container Recently__headline">
         <h2>RECENTLY WATCHED</h2>
 
@@ -108,35 +129,29 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
           slides-per-view="auto"
           class="VotedMovies"
         >
-          <swiper-slide v-for="i in 10" :key="i" class="VotedMovies__item">
-            <MovieCard />
+          <swiper-slide
+            v-for="movie in movieStore.movies.data.filter((movie) =>
+              userStore.user?.last_views.includes(movie.id)
+            )"
+            :key="movie.id"
+            class="VotedMovies__item"
+          >
+            <MovieCard :data="movie" />
           </swiper-slide>
         </swiper>
       </ClientOnly>
     </section>
 
-    <section class="container Home__movies">
-      <div class="Movies__header">
-        <div class="Movies__headline">
-          <h2>FEATURED FILMS</h2>
-          <p>
-            Browse through an extensive collection of films, from iconic
-            masterpieces to hidden gems, guaranteed to leave a lasting
-            impression.
-          </p>
-        </div>
-
-        <div class="Movies__search">
-          <input type="text" placeholder="Search Movies..." />
-        </div>
-      </div>
-
-      <ul class="Movies__lists">
-        <li v-for="i in 20" :key="i" class="Movies__item">
-          <MovieCard />
-        </li>
-      </ul>
-    </section>
+    <MovieList
+      title="FEATURED FILMS"
+      description="Browse through an extensive collection of films, from iconic
+          masterpieces to hidden gems, guaranteed to leave a lasting impression."
+      with-search
+      :data="movieStore.movies"
+      :current-page="movieStore.movie_filter.page"
+      @page-changed="movieStore.movie_filter.page = $event"
+      @on-search="handleSearchMovies"
+    />
   </main>
 </template>
 

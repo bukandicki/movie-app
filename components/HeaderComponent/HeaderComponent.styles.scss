@@ -41,9 +41,7 @@
   }
 
   input {
-    @include fontStyling(18, 500);
     margin-left: viewportSize(16);
-    color: getColor("ivory");
     padding-right: viewportSize(32);
   }
 }
