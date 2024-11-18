@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/image", "@nuxt/fonts"],
+  modules: ["@nuxt/image", "@nuxt/fonts", "@pinia/nuxt"],
 
   vite: {
     css: {
@@ -85,5 +85,5 @@ export default defineNuxtConfig({
   css: ["~/assets/scss/_preflight.scss"],
 
   compatibilityDate: "2024-04-03",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 });
