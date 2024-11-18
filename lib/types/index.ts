@@ -1,3 +1,17 @@
+export type FILTER_TYPE = {
+  search: string;
+  page: number;
+  limit: number;
+};
+
+export type API_RESPONSE_TYPE<T> = {
+  message: string;
+  data: T;
+  total_pages?: number;
+  page?: number;
+  limit?: number;
+};
+
 export type USER_VOTE_TYPE = {
   movie_id: number;
   rating: number;
