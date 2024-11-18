@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
 const movieStore = useMovieStore();
+const userStore = useUserStore();
 
 const { result: slide_space } = useCalc("slide-space", 40);
 const { result: slide_offset } = useCalc("slide-offset", 112);
@@ -82,7 +83,7 @@ const handleSearchMovies = (value: string) => {
       </div>
     </section>
 
-    <section class="Home__voted">
+    <section class="Home__voted" v-if="userStore.user">
       <div class="Voted__headline">
         <h2>VOTED MOVIES</h2>
 
@@ -100,7 +101,11 @@ const handleSearchMovies = (value: string) => {
           class="VotedMovies"
         >
           <swiper-slide
-            v-for="movie in movieStore.movies.data"
+            v-for="movie in movieStore.movies.data.filter((movie) =>
+              userStore.user?.voted_movies.some(
+                (voted) => voted.movie_id === movie.id
+              )
+            )"
             :key="movie.id"
             class="VotedMovies__item"
           >
@@ -110,7 +115,7 @@ const handleSearchMovies = (value: string) => {
       </ClientOnly>
     </section>
 
-    <section class="Home__recently">
+    <section class="Home__recently" v-if="userStore.user">
       <div class="container Recently__headline">
         <h2>RECENTLY WATCHED</h2>
 
@@ -125,7 +130,9 @@ const handleSearchMovies = (value: string) => {
           class="VotedMovies"
         >
           <swiper-slide
-            v-for="movie in movieStore.movies.data"
+            v-for="movie in movieStore.movies.data.filter((movie) =>
+              userStore.user?.last_views.includes(movie.id)
+            )"
             :key="movie.id"
             class="VotedMovies__item"
           >
