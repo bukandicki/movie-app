@@ -1,21 +1,38 @@
 <script lang="ts" setup>
+import type { MOVIE_TYPE } from "~/lib/types";
+
 const thumbnailInput = ref<HTMLInputElement>();
 const movieInput = ref<HTMLInputElement>();
 
 let timeout: NodeJS.Timeout;
+
+const movieStore = useMovieStore();
 
 const artists = useState<string[]>("artist-list", () => []);
 const genres = useState<string[]>("genre-list", () => []);
 
 const thumbnail_base64 = useState<string>("thumbnail", () => "");
 const video_base64 = useState<string>("video", () => "");
+const payload = useState<Omit<MOVIE_TYPE, "id">>();
+
+await useAsyncData("fetch_movies", () => movieStore.FETCH_MOVIES(), {
+  watch: [movieStore.movie_filter],
+});
+
+const { execute } = await useAsyncData(
+  "create_movie",
+  () => movieStore.CREATE_MOVIE(payload.value),
+  {
+    immediate: false,
+  }
+);
 
 const handleMultipleInput = (currentVal: string, key: string) => {
   clearTimeout(timeout);
 
   timeout = setTimeout(() => {
     const separatorRegex = new RegExp(
-      "(?<=^|,)\s*([a-zA-Z0-9._]+(?:[a-zA-Z0-9-_]+)?)",
+      "(?<=^|,)\s*([a-zA-Z0-9._-]+(?: [a-zA-Z0-9._-]+)*)",
       "g"
     );
 
@@ -78,22 +95,27 @@ const handleCreateMovie = async (e: Event) => {
   const thumbnail = await base64Converter(fd.get("thumbnail") as File);
   const watch_url = await base64Converter(fd.get("movie") as File);
 
-  await $fetch("/api/movies", {
-    method: "POST",
-    body: JSON.stringify({
-      title: fd.get("title"),
-      description: fd.get("description"),
-      duration: fd.get("duration"),
-      artists: artists.value,
-      genres: genres.value,
-      thumbnail,
-      watch_url,
-      watched_by: [],
-      views: 0,
-      user_ratings: [{ name: "", rating: 0 }],
-      total_ratings: 0,
-    }),
-  });
+  payload.value = {
+    title: fd.get("title") as string,
+    description: fd.get("description") as string,
+    duration: fd.get("duration") as string,
+    artists: artists.value,
+    genres: genres.value,
+    thumbnail,
+    watch_url,
+    watched_by: [],
+    views: 0,
+    user_ratings: [{ id: 0, rating: 0 }],
+    total_ratings: 0,
+  };
+
+  await execute();
+
+  el.reset();
+  artists.value = [];
+  genres.value = [];
+  thumbnail_base64.value = "";
+  video_base64.value = "";
 };
 </script>
 
@@ -206,6 +228,9 @@ const handleCreateMovie = async (e: Event) => {
       title="MOST VIEWED MOVIES"
       description="The top picks that are breaking viewership records."
       with-search
+      :data="movieStore.movies"
+      :current-page="movieStore.movie_filter.page"
+      @page-changed="movieStore.movie_filter.page = $event"
     />
   </main>
 </template>
