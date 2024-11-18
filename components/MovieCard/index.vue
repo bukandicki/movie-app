@@ -8,7 +8,7 @@ defineProps<{ data: MOVIE_TYPE }>();
   <NuxtLink :href="`/movies/${data.id}`" class="MovieCard">
     <NuxtImg
       class="MovieCard__img"
-      src="/images/movies/sample2.jpg"
+      :src="data.thumbnail"
       alt=""
       preload
       format="webp"
