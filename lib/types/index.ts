@@ -23,7 +23,9 @@ export type MOVIE_TYPE = {
   description: string;
   duration: string;
   artists: string[];
+  watched_by: number[];
   genres: string[];
+  thumbnail: string;
   watch_url: string;
   views: number;
   user_ratings: USER_RATE[];

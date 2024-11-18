@@ -47,6 +47,7 @@ watch(video_state, async () => {
             <strong>Vote this movie</strong>
 
             <button
+              type="button"
               class="Vote__star-btn"
               @mouseenter="star_index = i"
               @click="selected_rating = i"
@@ -58,8 +59,8 @@ watch(video_state, async () => {
             </button>
           </div>
 
-          <button class="Vote__submit">VOTE</button>
-          <button class="Vote__cancel">CANCEL VOTE</button>
+          <button type="button" class="Vote__submit">VOTE</button>
+          <button type="button" class="Vote__cancel">CANCEL VOTE</button>
         </div>
       </div>
 
@@ -74,7 +75,11 @@ watch(video_state, async () => {
             sizes="100vw lg:720px 2xl:1024px"
           />
 
-          <button @click="video_state = 'played'" class="Display__play">
+          <button
+            type="button"
+            @click="video_state = 'played'"
+            class="Display__play"
+          >
             <LazyIconPlay />
           </button>
         </div>
