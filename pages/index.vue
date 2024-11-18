@@ -9,6 +9,8 @@ const userStore = useUserStore();
 const { result: slide_space } = useCalc("slide-space", 40);
 const { result: slide_offset } = useCalc("slide-offset", 112);
 
+await useAsyncData("voted_movies", () => userStore.GET_VOTED_MOVIES());
+await useAsyncData("last_viewed", () => userStore.GET_LAST_VIEWED());
 await useAsyncData("fetch_movies", () => movieStore.FETCH_MOVIES(), {
   watch: [movieStore.movie_filter],
 });
@@ -101,11 +103,7 @@ const handleSearchMovies = (value: string) => {
           class="VotedMovies"
         >
           <swiper-slide
-            v-for="movie in movieStore.movies.data.filter((movie) =>
-              userStore.user?.voted_movies.some(
-                (voted) => voted.movie_id === movie.id
-              )
-            )"
+            v-for="movie in userStore.voted_movies"
             :key="movie.id"
             class="VotedMovies__item"
           >
@@ -130,9 +128,7 @@ const handleSearchMovies = (value: string) => {
           class="VotedMovies"
         >
           <swiper-slide
-            v-for="movie in movieStore.movies.data.filter((movie) =>
-              userStore.user?.last_views.includes(movie.id)
-            )"
+            v-for="movie in userStore.last_views"
             :key="movie.id"
             class="VotedMovies__item"
           >

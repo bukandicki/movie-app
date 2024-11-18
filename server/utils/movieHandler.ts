@@ -1,4 +1,5 @@
 import users from "@/lib/data/users.json";
+import { MOVIE_TYPE } from "~/lib/types";
 
 /**
  * Finds users who have rated a specific movie.
@@ -19,6 +20,18 @@ export const getUsersWhoRatedMovie = (
     }
     return rated_users;
   }, [] as Array<{ id: number; rating: number }>);
+};
+
+/**
+ * Finds users movies.
+ * @param id - The ID of the user's videos to find their Movies.
+ * @returns An array of objects containing the movie object.
+ */
+export const findUserMovies = (
+  ids: number[],
+  movies: MOVIE_TYPE[]
+): MOVIE_TYPE[] => {
+  return movies.filter((movie) => ids.includes(movie.id));
 };
 
 /**

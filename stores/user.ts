@@ -45,11 +45,57 @@ export const useUserStore = defineStore("user_store", () => {
     }
   }
 
+  async function GET_LAST_VIEWED(): Promise<
+    API_RESPONSE_TYPE<MOVIE_TYPE[]> | undefined
+  > {
+    try {
+      const data = await $fetch<API_RESPONSE_TYPE<MOVIE_TYPE[]>>(
+        "/api/users/last-viewed",
+        {
+          method: "GET",
+          query: { ids: user.value?.last_views.join(",") },
+        }
+      );
+
+      last_views.value = data.data;
+
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async function GET_VOTED_MOVIES(): Promise<
+    API_RESPONSE_TYPE<MOVIE_TYPE[]> | undefined
+  > {
+    try {
+      const data = await $fetch<API_RESPONSE_TYPE<MOVIE_TYPE[]>>(
+        "/api/users/voted",
+        {
+          method: "GET",
+          query: {
+            ids: user.value?.voted_movies
+              .map((voted) => voted.movie_id)
+              .join(","),
+          },
+        }
+      );
+
+      voted_movies.value = data.data;
+
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return {
     user,
     last_views,
     voted_movies,
     GET_USER,
+    GET_LAST_VIEWED,
+    GET_VOTED_MOVIES,
     UPDATE_USER,
   };
 });

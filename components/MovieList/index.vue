@@ -41,6 +41,7 @@ const emit = defineEmits<{
     </ul>
 
     <Pagination
+      v-if="data.total_pages"
       @page-changed="emit('pageChanged', $event)"
       :current="currentPage"
       :total_pages="(data.total_pages as number)"
