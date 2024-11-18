@@ -6,13 +6,13 @@
     "duration": "2h 19m",
     "artists": ["Tobey Maguire", "Kirsten Dunst", "Topher Grace"],
     "genres": ["Superhero", "Urban Adventure", "Action", "Adventure", "Sci-Fi"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Spider-Man_3%2C_International_Poster.jpg/220px-Spider-Man_3%2C_International_Poster.jpg",
+    "watch_url": "https://www.w3schools.com/html/mov_bbb.mp4",
     "views": 20,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -25,13 +25,13 @@
     "duration": "2h 32m",
     "artists": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
     "genres": ["Superhero", "Crime", "Action", "Thriller", "Drama"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/id/f/fb/Dark_knight_rises_poster_anu.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2024/09/07/230248_large.mp4",
     "views": 50,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -44,13 +44,13 @@
     "duration": "2h 28m",
     "artists": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
     "genres": ["Sci-Fi", "Action", "Thriller"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2023/07/25/173137-848555631_large.mp4",
     "views": 100,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -63,13 +63,13 @@
     "duration": "2h 49m",
     "artists": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
     "genres": ["Sci-Fi", "Adventure", "Drama"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2020/10/31/53902-476396222_large.mp4",
     "views": 75,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -82,13 +82,13 @@
     "duration": "3h 1m",
     "artists": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
     "genres": ["Superhero", "Action", "Adventure", "Sci-Fi"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/id/0/0d/Avengers_Endgame_poster.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2019/02/01/21118-315137091_large.mp4",
     "views": 200,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -101,13 +101,13 @@
     "duration": "2h 12m",
     "artists": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"],
     "genres": ["Drama", "Thriller", "Comedy"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjk1Y2U4MjQtY2ZiNS00OWQyLWI3MmYtZWUwNmRjYWRiNWNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2019/02/01/21116-315137080_large.mp4",
     "views": 45,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -120,13 +120,13 @@
     "duration": "2h 16m",
     "artists": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
     "genres": ["Sci-Fi", "Action", "Adventure"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://www.rogerebert.com/wp-content/uploads/2024/03/The-Matrix.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2019/05/03/23258-334228230_large.mp4",
     "views": 150,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -139,13 +139,13 @@
     "duration": "2h 34m",
     "artists": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
     "genres": ["Crime", "Drama"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2019/02/01/21115-315137069_large.mp4",
     "views": 120,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -158,13 +158,13 @@
     "duration": "3h 48m",
     "artists": ["Elijah Wood", "Ian McKellen", "Orlando Bloom"],
     "genres": ["Fantasy", "Adventure", "Action"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwjvtARVQAFZvjgby4i1ev7I2h0OgHcG8YoQ&s",
+    "watch_url": "https://cdn.pixabay.com/video/2019/03/13/21985-323496013_large.mp4",
     "views": 200,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -177,13 +177,13 @@
     "duration": "2h 22m",
     "artists": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
     "genres": ["Drama", "Crime"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
     "views": 180,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -196,13 +196,13 @@
     "duration": "2h 7m",
     "artists": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
     "genres": ["Sci-Fi", "Adventure", "Action"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjM5QuH8RQmTMr-EBDgylY8PmmboqiA62-g&s",
+    "watch_url": "https://cdn.pixabay.com/video/2024/02/10/200023-911915504_large.mp4",
     "views": 130,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -215,13 +215,13 @@
     "duration": "1h 58m",
     "artists": ["Matthew Broderick", "Jeremy Irons", "James Earl Jones"],
     "genres": ["Animation", "Adventure", "Drama"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://lumiere-a.akamaihd.net/v1/images/wonderwall_dom_payoff_poster_indonesia_70x100_b_1_e49c626d.jpeg",
+    "watch_url": "https://cdn.pixabay.com/video/2022/10/26/136641-764417517_large.mp4",
     "views": 95,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -234,13 +234,13 @@
     "duration": "2h 22m",
     "artists": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
     "genres": ["Drama", "Romance"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://m.media-amazon.com/images/I/91++WV6FP4L._AC_UF1000,1000_QL80_.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2023/11/05/188021-881528788_large.mp4",
     "views": 140,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -253,13 +253,13 @@
     "duration": "2h 35m",
     "artists": ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen"],
     "genres": ["Action", "Drama", "Adventure"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://m.media-amazon.com/images/M/MV5BYWQ4YmNjYjEtOWE1Zi00Y2U4LWI4NTAtMTU0MjkxNWQ1ZmJiXkEyXkFqcGc@._V1_.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2023/09/27/182517-868916307_large.mp4",
     "views": 110,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -272,13 +272,13 @@
     "duration": "2h 42m",
     "artists": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
     "genres": ["Sci-Fi", "Adventure", "Fantasy"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://lumiere-a.akamaihd.net/v1/images/avatar-wayofwater-en_a56a9e95_1d38e163.jpeg?region=0%2C0%2C600%2C900",
+    "watch_url": "https://cdn.pixabay.com/video/2023/05/20/163869-828669760_large.mp4",
     "views": 230,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],
@@ -291,13 +291,13 @@
     "duration": "1h 21m",
     "artists": ["Tom Hanks", "Tim Allen", "Don Rickles"],
     "genres": ["Animation", "Adventure", "Comedy"],
-    "thumbnail": "",
-    "watch_url": "",
+    "thumbnail": "https://m.media-amazon.com/images/M/MV5BZTA3OWVjOWItNjE1NS00NzZiLWE1MjgtZDZhMWI1ZTlkNzYwXkEyXkFqcGc@._V1_.jpg",
+    "watch_url": "https://cdn.pixabay.com/video/2020/02/05/31953-389724688_large.mp4",
     "views": 90,
     "watched_by": [1],
     "user_ratings": [
       {
-        "name": "",
+        "id": 0,
         "rating": 0
       }
     ],

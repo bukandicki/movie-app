@@ -19,10 +19,10 @@
     "password": "jhon",
     "voted_movies": [
       {
-        "movie_id": 1,
+        "movie_id": 2,
         "rating": 3
       }
     ],
-    "last_views": [1]
+    "last_views": []
   }
 ]

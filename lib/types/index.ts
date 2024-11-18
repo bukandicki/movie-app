@@ -27,7 +27,7 @@ export type USER_TYPE = {
 };
 
 export type USER_RATE = {
-  name: string;
+  id: number;
   rating: number;
 };
 
