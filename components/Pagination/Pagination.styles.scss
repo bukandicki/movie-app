@@ -1,0 +1,42 @@
+@use "~/assets/scss/functions" as *;
+@use "~/assets/scss/mixins" as *;
+
+.Pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.Pagination__wrapper {
+  display: flex;
+  border: solid viewportSize(1) getColor("ivory");
+
+  li button {
+    @include fontStyling(20, 500);
+    width: viewportSize(56);
+    aspect-ratio: 1;
+    color: getColor("ivory");
+  }
+
+  li:not(:last-child) button {
+    border-right: solid viewportSize(1) getColor("ivory");
+  }
+}
+
+.Pagination__navigation {
+  svg {
+    stroke-width: 1.5;
+    stroke: getColor("sea");
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+
+    svg {
+      stroke: getColor("ivory", 0.3);
+    }
+  }
+}
+
+.Pagination__page-btn[data-active="true"] {
+  color: getColor("sea");
+}
