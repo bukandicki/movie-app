@@ -3,8 +3,20 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 import "swiper/css";
 
+const movieStore = useMovieStore();
+
 const { result: slide_space } = useCalc("slide-space", 40);
 const { result: slide_offset } = useCalc("slide-offset", 112);
+
+await useAsyncData("fetch_movies", () => movieStore.FETCH_MOVIES(), {
+  watch: [movieStore.movie_filter],
+});
+
+const handleSearchMovies = (value: string) => {
+  movieStore.movie_filter.page = 1;
+  movieStore.movie_filter.limit = 10;
+  movieStore.movie_filter.search = value;
+};
 </script>
 
 <template>
@@ -87,8 +99,12 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
           slides-per-view="auto"
           class="VotedMovies"
         >
-          <swiper-slide v-for="i in 10" :key="i" class="VotedMovies__item">
-            <MovieCard />
+          <swiper-slide
+            v-for="movie in movieStore.movies.data"
+            :key="movie.id"
+            class="VotedMovies__item"
+          >
+            <MovieCard :data="movie" />
           </swiper-slide>
         </swiper>
       </ClientOnly>
@@ -108,8 +124,12 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
           slides-per-view="auto"
           class="VotedMovies"
         >
-          <swiper-slide v-for="i in 10" :key="i" class="VotedMovies__item">
-            <MovieCard />
+          <swiper-slide
+            v-for="movie in movieStore.movies.data"
+            :key="movie.id"
+            class="VotedMovies__item"
+          >
+            <MovieCard :data="movie" />
           </swiper-slide>
         </swiper>
       </ClientOnly>
@@ -120,6 +140,10 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
       description="Browse through an extensive collection of films, from iconic
           masterpieces to hidden gems, guaranteed to leave a lasting impression."
       with-search
+      :data="movieStore.movies"
+      :current-page="movieStore.movie_filter.page"
+      @page-changed="movieStore.movie_filter.page = $event"
+      @on-search="handleSearchMovies"
     />
   </main>
 </template>
