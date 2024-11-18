@@ -45,7 +45,7 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
               <span>Peter Parker's Dead</span>
             </div>
 
-            <button class="Gallery__watch">
+            <button type="button" class="Gallery__watch">
               <span><IconPlay /></span>
 
               <span>
@@ -115,28 +115,12 @@ const { result: slide_offset } = useCalc("slide-offset", 112);
       </ClientOnly>
     </section>
 
-    <section class="container Home__movies">
-      <div class="Movies__header">
-        <div class="Movies__headline">
-          <h2>FEATURED FILMS</h2>
-          <p>
-            Browse through an extensive collection of films, from iconic
-            masterpieces to hidden gems, guaranteed to leave a lasting
-            impression.
-          </p>
-        </div>
-
-        <div class="Movies__search">
-          <input type="text" placeholder="Search Movies..." />
-        </div>
-      </div>
-
-      <ul class="Movies__lists">
-        <li v-for="i in 20" :key="i" class="Movies__item">
-          <MovieCard />
-        </li>
-      </ul>
-    </section>
+    <MovieList
+      title="FEATURED FILMS"
+      description="Browse through an extensive collection of films, from iconic
+          masterpieces to hidden gems, guaranteed to leave a lasting impression."
+      with-search
+    />
   </main>
 </template>
 
