@@ -17,7 +17,7 @@
 
 .Header__nav li a,
 .Header__login {
-  transition: all ease-in-out 0.25s;
+  transition: color ease-in-out 0.25s;
 
   &:hover {
     color: getColor("sea");
@@ -45,14 +45,6 @@
     margin-left: viewportSize(16);
     color: getColor("ivory");
     padding-right: viewportSize(32);
-
-    &::placeholder {
-      color: getColor("ivory", 0.7);
-    }
-
-    &::-ms-input-placeholder {
-      color: getColor("ivory", 0.7);
-    }
   }
 }
 

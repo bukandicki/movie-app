@@ -1,0 +1,63 @@
+@use "~/assets/scss/functions" as *;
+@use "~/assets/scss/mixins" as *;
+
+.MovieCard {
+  max-width: viewportSize(320);
+}
+
+.MovieCard__img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.MovieCard__title {
+  @include fontStyling(20, 500);
+  margin-top: viewportSize(12);
+}
+
+.MovieCard__details {
+  display: flex;
+  margin-top: viewportSize(12);
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    width: viewportSize(16);
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: viewportSize(20);
+  }
+}
+
+.MovieCard__duration,
+.MovieCard__viewers,
+.MovieCard__rating {
+  display: flex;
+  align-items: center;
+  gap: viewportSize(8);
+}
+
+.MovieCard__duration,
+.MovieCard__viewers {
+  @include fontStyling(16);
+  color: getColor("ivory", 0.5);
+}
+
+.MovieCard__duration svg,
+.MovieCard__viewers svg {
+  stroke: getColor("ivory", 0.5);
+  stroke-width: 3;
+}
+
+.MovieCard__rating {
+  @include fontStyling(16, 500);
+  color: getColor("ivory");
+
+  svg {
+    fill: getColor("ivory");
+  }
+}

@@ -2,12 +2,299 @@
   {
     "id": 1,
     "title": "Spider-Man 3",
-    "description": "Peter Parker has finally managed to piece together the once-broken parts of his life, maintaining a balance between his relationship with Mary-Jane and his responsibility as Spider-Man. But more challenges arise for our young hero. Peter's old friend Harry Obsourne has set out for revenge against Peter; taking up the mantle of his late father's persona as The New Goblin, and Peter must also capture Uncle Ben's real killer, Flint Marko, who has been transformed into his toughest foe yet, the Sandman. All hope seems lost when suddenly Peter's suit turns jet-black and greatly amplifies his powers. But it also begins to greatly amplify the much darker qualities of Peter's personality that he begins to lose himself to. Peter has to reach deep inside himself to free the compassionate hero he used to be if he is to ever conquer the darkness within and face not only his greatest enemies",
+    "description": "Peter Parker has finally managed to piece together the once-broken parts of his life, maintaining a balance between his relationship with Mary-Jane and his responsibility as Spider-Man. But more challenges arise for our young hero. Peter's old friend Harry Osborn has set out for revenge against Peter; taking up the mantle of his late father's persona as The New Goblin, and Peter must also capture Uncle Ben's real killer, Flint Marko, who has been transformed into his toughest foe yet, the Sandman. All hope seems lost when suddenly Peter's suit turns jet-black and greatly amplifies his powers. But it also begins to greatly amplify the much darker qualities of Peter's personality that he begins to lose himself to. Peter has to reach deep inside himself to free the compassionate hero he used to be if he is to ever conquer the darkness within and face not only his greatest enemies.",
     "duration": "2h 19m",
     "artists": ["Tobey Maguire", "Kirsten Dunst", "Topher Grace"],
     "genres": ["Superhero", "Urban Adventure", "Action", "Adventure", "Sci-Fi"],
+    "thumbnail": "",
     "watch_url": "",
     "views": 20,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 2,
+    "title": "The Dark Knight",
+    "description": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The caped crusader must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    "duration": "2h 32m",
+    "artists": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "genres": ["Superhero", "Crime", "Action", "Thriller", "Drama"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 50,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 3,
+    "title": "Inception",
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+    "duration": "2h 28m",
+    "artists": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+    "genres": ["Sci-Fi", "Action", "Thriller"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 100,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 4,
+    "title": "Interstellar",
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "duration": "2h 49m",
+    "artists": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+    "genres": ["Sci-Fi", "Adventure", "Drama"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 75,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 5,
+    "title": "Avengers: Endgame",
+    "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more to reverse Thanos' actions and restore balance to the universe.",
+    "duration": "3h 1m",
+    "artists": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
+    "genres": ["Superhero", "Action", "Adventure", "Sci-Fi"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 200,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 6,
+    "title": "Parasite",
+    "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+    "duration": "2h 12m",
+    "artists": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"],
+    "genres": ["Drama", "Thriller", "Comedy"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 45,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 7,
+    "title": "The Matrix",
+    "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "duration": "2h 16m",
+    "artists": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+    "genres": ["Sci-Fi", "Action", "Adventure"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 150,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 8,
+    "title": "Pulp Fiction",
+    "description": "The lives of two mob hitmen, a boxer, a gangster, and his wife intertwine in four tales of violence and redemption.",
+    "duration": "2h 34m",
+    "artists": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+    "genres": ["Crime", "Drama"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 120,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 9,
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+    "duration": "3h 48m",
+    "artists": ["Elijah Wood", "Ian McKellen", "Orlando Bloom"],
+    "genres": ["Fantasy", "Adventure", "Action"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 200,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 10,
+    "title": "The Shawshank Redemption",
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "duration": "2h 22m",
+    "artists": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
+    "genres": ["Drama", "Crime"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 180,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 11,
+    "title": "Jurassic Park",
+    "description": "A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",
+    "duration": "2h 7m",
+    "artists": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
+    "genres": ["Sci-Fi", "Adventure", "Action"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 130,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 12,
+    "title": "The Lion King",
+    "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+    "duration": "1h 58m",
+    "artists": ["Matthew Broderick", "Jeremy Irons", "James Earl Jones"],
+    "genres": ["Animation", "Adventure", "Drama"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 95,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 13,
+    "title": "Forrest Gump",
+    "description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+    "duration": "2h 22m",
+    "artists": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
+    "genres": ["Drama", "Romance"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 140,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 14,
+    "title": "Gladiator",
+    "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+    "duration": "2h 35m",
+    "artists": ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen"],
+    "genres": ["Action", "Drama", "Adventure"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 110,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 15,
+    "title": "Avatar",
+    "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "duration": "2h 42m",
+    "artists": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
+    "genres": ["Sci-Fi", "Adventure", "Fantasy"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 230,
+    "watched_by": [1],
+    "user_ratings": [
+      {
+        "name": "",
+        "rating": 0
+      }
+    ],
+    "total_ratings": 0
+  },
+  {
+    "id": 16,
+    "title": "Toy Story",
+    "description": "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.",
+    "duration": "1h 21m",
+    "artists": ["Tom Hanks", "Tim Allen", "Don Rickles"],
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "thumbnail": "",
+    "watch_url": "",
+    "views": 90,
+    "watched_by": [1],
     "user_ratings": [
       {
         "name": "",
